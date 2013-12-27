@@ -1,0 +1,19 @@
+@import "compass";
+@import "framework/varibles";
+.moods-zone{
+	
+}
+.moods-list{
+	float: left;
+	margin:20px;
+	padding:5px;
+	border-radius: $radius;
+	border:1px solid orange;
+	overflow: hidden;
+	display: block;
+	&:hover{
+		color:#fff;
+		background:$subColor;
+		cursor: pointer;
+	}
+}

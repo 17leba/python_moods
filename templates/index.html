@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{P_HTTP.home}}/static/style/home.css">
+{% endblock %}
+{% block main %}
+<div class="moods-zone">
+	<ul class="clearfix">  
+		{% for mood in moods %}
+	    <li>  
+	    	<a data-id="{{mood.id}}" href="#" class="moods-list">
+	    		{{mood.content}}
+				<span class="post-time">
+					{{mood.posted_on}}
+		    	</span>
+	    	</a>
+	    </li> 
+	    {% endfor %} 
+	</ul>  
+</div>
+{% endblock %}
+{% block tail %}
+<script src="{{P_HTTP.home}}/static/js/home.js"></script>
+{% endblock %}
+
+

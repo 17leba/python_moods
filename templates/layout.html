@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{title}}</title>
+	<link rel="stylesheet" href="{{P_HTTP.home}}/static/style/public.css">
+	{% block head %}
+	{% endblock %}
+	<script src="{{P_HTTP.home}}/static/js/jquery.js"></script>
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="{{P_HTTP.home}}/static/js/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header class="clearfix">
+		<h1><a href="{{P_HTTP.home}}" title='$title' class="logo"></a></h1>
+		<span class="today-mood">少壮不努力</span>
+	</header>
+	<div class="main">
+	{% block main %}
+	{% endblock %}
+	</div>
+	<footer>
+		<a href="http://17leba.com" class="my-site">17leba.com</a>
+	</footer>
+	{% block tail %}
+	{% endblock %}
+</body>
+</html>
+

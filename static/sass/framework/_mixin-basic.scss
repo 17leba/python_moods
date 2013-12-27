@@ -1,0 +1,26 @@
+// header
+@mixin header{
+	position: fixed;
+	left:0;
+	top:0;
+	width: 100%;
+	height:40px;
+	line-height: 40px;
+	padding:0 40px;
+	background: $mainColor;
+	.logo{
+		float: left;
+		width:53px;
+		height: 40px;
+		margin-right: 15px;
+		overflow: hidden;
+		background: url(#{$imageUrl}logo.png) no-repeat left top
+	}
+	.today-mood{
+		overflow: hidden;
+		color:#fff
+	}
+}
+@mixin footer{
+	text-align: center;
+}

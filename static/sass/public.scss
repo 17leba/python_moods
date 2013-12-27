@@ -1,0 +1,15 @@
+@import "compass";
+@import "framework/varibles";
+@import "framework/mixin-basic";
+//reset
+@import "framework/reset";
+header{
+	@include header;
+}
+
+.main{
+	padding:40px;
+}
+footer{
+	@include footer;
+}
