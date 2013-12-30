@@ -39,7 +39,7 @@ class AddMood:
 class ViewMood:
 	def GET(self):
 		web.header('Content-type','application/json')
-		id = web.input(_method='get').id
+		id = web.input(_method='get').postId
 		post = model.get_post(int(id))
 		return json.dumps(post,cls=CJsonEncoder)
 
