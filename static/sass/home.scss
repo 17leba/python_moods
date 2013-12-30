@@ -7,6 +7,9 @@
 	float: left;
 	margin:20px;
 	padding:5px;
+	max-width: 200px;
+	max-height: 16px;
+	overflow: hidden;
 	border-radius: $radius;
 	border:1px solid orange;
 	overflow: hidden;
