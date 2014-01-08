@@ -20,32 +20,16 @@
 		cursor: pointer;
 	}
 }
-.post-detail{
-	background: #fff;
-	display: inline-block;
-	vertical-align: middle;
-	min-width: 400px;
-	min-height:100px;
-	text-align: center;
-	border:1px solid $subColor;
-	border-radius: $radius;
-	position: relative;
-	.post-content{
-		font-size: 14px;
-		line-height: 1.8;
-	}
-	.post-time{
-		padding-left: 15px;
-	}
-	.close-btn{
-		position: absolute;
-		top:0;
-		right: 10px;
-		font-size: 20px;
-		color:#999;
-		cursor: pointer;
-	}
-}
 .post-detail-zone{
 	padding:20px;
+}
+.post-content{
+	font-size: 14px;
+	line-height: 1.8;
+}
+.post-time{
+	padding-left: 15px;
+}
+.add-post-detail{
+
 }

@@ -6,19 +6,24 @@
 	width: 100%;
 	height:40px;
 	line-height: 40px;
-	padding:0 40px;
 	background: $mainColor;
+	color:#fff;
 	.logo{
 		float: left;
 		width:53px;
 		height: 40px;
 		margin-right: 15px;
+		margin-left:40px;
 		overflow: hidden;
 		background: url(#{$imageUrl}logo.png) no-repeat left top
 	}
 	.today-mood{
 		overflow: hidden;
-		color:#fff
+	}
+	.add-post-btn{
+		float: right;
+		color:#fff;
+		margin-right: 40px;
 	}
 }
 @mixin footer{
@@ -39,4 +44,41 @@
 		height: 100%;
 		vertical-align: middle;
 	}
+}
+@mixin popup{
+	background: #fff;
+	display: inline-block;
+	vertical-align: middle;
+	min-width: 400px;
+	min-height:100px;
+	text-align: center;
+	border:1px solid $subColor;
+	border-radius: $radius;
+	position: relative;
+	.close-btn{
+		position: absolute;
+		top:0;
+		right: 10px;
+		font-size: 20px;
+		color:#999;
+		cursor: pointer;
+	}
+}
+@mixin textarea{
+	border:1px solid $subColor;
+	min-width: 200px;
+	min-height: 50px;
+	background: #eee;
+	padding:5px;
+	font-size: $fontSize;
+}
+@mixin btn{
+	font-size: $fontLarge;
+	border:0 none;
+	background: $mainColor;
+	height:28px;
+	line-height: 28px;
+	color:#fff;
+	text-align: center;
+	cursor: pointer;
 }

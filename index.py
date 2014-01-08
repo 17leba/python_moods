@@ -14,11 +14,7 @@ urls = (
     '/view', 'ViewMood' 
 )
 
-# env.globals['title'] = lambda:p_globals['title']
 app = web.application(urls, globals())
-# render = web.template.render('templates',base='layout',globals=p_globals)
-# # http://www.felix021.com/blog/read.php?2121;http://www.zhihu.com/question/19629981
-# p_globals['render'] = render
 
 class Index:        
     def GET(self):
@@ -52,7 +48,6 @@ class CJsonEncoder(json.JSONEncoder):
             return obj.strftime('%Y-%m-%d')
         else:
             return json.JSONEncoder.default(self, obj)
- 
 
 if __name__ == '__main__':
 	app.run()

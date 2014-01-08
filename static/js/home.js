@@ -1,13 +1,16 @@
 $(function(){
+	var $mask = $(".mask");
 	var home = {
 		init:function(){
 			this.renderPost();
+			this.addPostShow();
 			this.closePost()
 		},
 		renderPost:function(){
 			var $moodList = $(".moods-list");
 			$moodList.on("click",function(){
-				$(".mask").removeClass("hide")
+				$mask.append($("#post-detail").text());
+				$mask.removeClass("hide");
 				var $this = $(this),
 				    postId = $this.attr("data-id"),
 				    html = '';
@@ -21,10 +24,22 @@ $(function(){
 				})
 			})
 		},
+		addPostShow:function(){
+			var $addBtn = $(".add-post-btn");
+			$addBtn.on("click",function(){
+				$mask.append($("#add-post").text());
+				$mask.removeClass("hide");
+			})
+		},
+		addPost:function(){
+			var $addPostBtn = $("")
+		},
 		closePost:function(){
-			$(".close-btn").on("click",function(){
-				$(".mask").addClass("hide");
-				$(".post-detail-zone").html("")
+			$(".close-btn").live("click",function(){
+				$mask.addClass("hide");
+				if($(".popup").length){
+					$(".popup").remove()
+				}
 			})
 		}
 	}

@@ -20,14 +20,25 @@
 {% endblock %}
 {% block tail %}
 <script src="{{P_HTTP.home}}/static/js/home.js"></script>
-<div class="mask hide">
-	<span class="mask-line"></span>
-	<div class="post-detail">
+<script id="post-detail" type="text/template">
+	<div class="popup post-detail">
 		<div class="post-detail-zone">
-			
 		</div>
 		<span class="close-btn">x</span>
 	</div>
+</script>
+<script id="add-post" type="text/template">
+	<div class="popup add-post-detail">
+		<h1>新的心情</h1>
+		<form action="/add" method="post">
+			<textarea name="mood_content" id="mood" class="textarea add-post-textarea"></textarea>
+			<input type="submit" value="添加心情" class="btn"/>
+		</form>
+		<span class="close-btn">x</span>
+	</div>
+</script>
+<div class="mask hide">
+	<span class="mask-line"></span>
 </div>
 {% endblock %}
 

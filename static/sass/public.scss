@@ -16,3 +16,12 @@ footer{
 .mask{
 	@include mask;
 }
+.popup{
+	@include popup;
+}
+.textarea{
+	@include textarea;
+}
+.btn{
+	@include btn;
+}
